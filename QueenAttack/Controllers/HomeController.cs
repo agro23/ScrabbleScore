@@ -11,7 +11,9 @@ namespace QueenAttack.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      return View("Index", "");
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      model.Add("msg", "");
+      return View("Index", model);
     }
 
     [HttpPost("/")]
@@ -46,9 +48,15 @@ namespace QueenAttack.Controllers
           msg = "Queen cannot attack piece :(";
         }
       }
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      model.Add("msg", msg);
+      model.Add("qx", qx);
+      model.Add("qy", qy);
+      model.Add("vx", vx);
+      model.Add("vy", vy);
 
 
-      return View("Index", msg);
+      return View("Index", model);
     }
   }
 }

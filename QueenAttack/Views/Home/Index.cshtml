@@ -4,6 +4,7 @@
     <meta charset='utf-8'>
     <title>Queen Attack</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
     <div class="container well">
@@ -17,9 +18,53 @@
           <button type="submit" class="btn btn-info" name="button">GO!</button>
         </form>
       </div>
-      <div class="row">
-        <h3>@Model</h3>
-      </div>
+      @if(@Model["msg"].Length > 0)
+      {
+        var isWhite = true;
+        @for(var y = 1; y <= 8; y++)
+        {
+          <div class="row">
+          @for(var x = 1; x <= 8; x++)
+          {
+              @if(isWhite)
+              {
+                <div class="col-xs-1 whiteSquare">
+                  @if(x == @Model["qx"] && y == @Model["qy"])
+                  {
+                    <img src="~/img/queen.png" alt="queen">
+                  }
+                  @if(x == @Model["vx"] && y == @Model["vy"])
+                  {
+                    <img id="pawn" src="~/img/pawn.png" alt="pawn">
+                  }
+                </div>
+              }
+              else
+              {
+                <div class="col-xs-1 redSquare">
+                  @if(x == @Model["qx"] && y == @Model["qy"])
+                  {
+                    <img src="~/img/queen.png" alt="queen">
+                  }
+                  @if(x == @Model["vx"] && y == @Model["vy"])
+                  {
+                    <img id="pawn" src="~/img/pawn.png" alt="pawn">
+                  }
+                </div>
+              }
+              isWhite = !isWhite;
+
+          }
+          </div>
+
+          isWhite = !isWhite;
+        }
+      }
+
+      <h3>@Model["msg"]</h3>
+
+
+
 
     </div>
   </body>
