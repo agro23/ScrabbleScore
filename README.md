@@ -30,7 +30,101 @@ A program for two players to play Rock Paper Scissors.
 
 ## Specifications
 
-* SOMETHING
+* Create a PlayerOne string var set to "Rock".
+
+* Create a PlayerTwo string var set to "Rock".
+
+* Check if PlayerOne == PlayerTwo. If so output "It's a Tie!" to REPL.
+
+* Change PlayerOne to "Paper".
+
+* Check if PlayerOne == PlayerTwo. If NOT output "Player One wins!" to REPL.
+
+* Change PlayerOne to "Scissors".
+
+* Check if PlayerOne == PlayerTwo. If NOT output "Player Two wins!" to REPL.
+
+* Using the following combined game logic, check all of the following states of PlayerOne against PlayerTwo.
+  - if PlayerOne is "Rock" and PlayerTwo is "Rock" output "It's a tie!" to REPL
+  - if PlayerOne is "Rock" and PlayerTwo is "Paper" output "Player Two wins!" to REPL
+  - if PlayerOne is "Rock" and PlayerTwo is "Scissors" output "Player One wins!" to REPL
+  - if PlayerOne is "Paper" and PlayerTwo is "Rock" output "Player One wins!" to REPL
+  - if PlayerOne is "Paper" and PlayerTwo is "Paper" output "It's a tie!" to REPL
+  - if PlayerOne is "Paper" and PlayerTwo is "Scissors" output "Player Two wins!" to REPL
+  - if PlayerOne is "Scissors" and PlayerTwo is "Rock" output "Player One wins!" to REPL
+  - if PlayerOne is "Scissors" and PlayerTwo is "Paper" output "Player Two wins!" to REPL
+  - if PlayerOne is "Scissors" and PlayerTwo is "Scissors" output "It's a tie!" to REPL
+
+* Take input of "Rock", "Paper", or "Scissors" from Player One
+
+* With PlayerTwo still set as "Rock", run the game logic to find out if the Player One is a winner.
+
+* Take input of "Rock", "Paper", or "Scissors" from Player two
+
+* Run the game logic to see who is the winner.
+
+* Create a PlayerTest Object with an ID, instances array, name, and currentMove.
+
+* Add Getters, and Setters.
+
+* Create a "Player One" instance
+
+* Set Player One currentMove to "Rock"
+
+* Create a "Player Two" instance.  
+
+* Set Player Two currentMove to "Rock"
+
+* Add a static Method to check moves provided by Player One and Player Two that returns either "Player One", "Player Two", or "Draw" depending on the game logic stated above.
+
+* Get a move from Player One via a form and output it to the Console.
+
+* Set Player Two to "Rock", "Paper", and "Scissors" in turn, checking each against Player One's move and outputting the result to the Console.
+  - EXPECTED INPUT: "Rock" (and PlayerTwo is set to "Rock")
+  - EXPECTED OUTPUT: "Draw" to Console
+  - EXPECTED INPUT: "Rock" (and PlayerTwo is set to "Paper")
+  - EXPECTED OUTPUT: "Player Two" to Console
+  - EXPECTED INPUT: "Rock" (and PlayerTwo is set to "Scissors")
+  - EXPECTED OUTPUT: "Player One" to Console
+  - EXPECTED INPUT: "Paper" (and PlayerTwo is set to "Rock")
+  - EXPECTED OUTPUT: "Player One" to Console
+  - EXPECTED INPUT: "Paper" (and PlayerTwo is set to "Paper")
+  - EXPECTED OUTPUT: "Draw" to Console
+  - EXPECTED INPUT: "Paper" (and PlayerTwo is set to "Scissors")
+  - EXPECTED OUTPUT: "Player Two" to Console
+  - EXPECTED INPUT: "Scissors" (and PlayerTwo is set to "Rock")
+  - EXPECTED OUTPUT: "Player Two" to Console
+  - EXPECTED INPUT: "Scissors" (and PlayerTwo is set to "Paper")
+  - EXPECTED OUTPUT: "Player One" to Console
+  - EXPECTED INPUT: "Scissors" (and PlayerTwo is set to "Scissors")
+  - EXPECTED OUTPUT: "Draw" to Console
+
+* Create an View called Index.cshtml as a title screen.
+
+* Take input from Player One via a form on Index.cshtml.
+
+* Take input from Player Two via a form on Index.cshtml.
+
+* Run the input from both players through the game logic with outputs to the Console
+
+* Run the input from both players through the game logic with outputs to a Results.cshtml page.
+
+* Validate inputs as only "Rock", "Paper", or "Scissors".
+
+* Modify the results from the Object into an actual sentence to send to the Results page.
+
+* Refactor code as needed.
+
+**IF TIME PERMITS:**
+
+* Create an instance of the Player Object called Computer
+
+* Repeat all the tests of Player Two but on the Computer object instead
+
+* Have the Computer Player choose a random
+
+* Have the Computer choose a move based on VERY light AI.
+
 * Refactor code as needed.
 
 ## Setup/Installation Requirements
