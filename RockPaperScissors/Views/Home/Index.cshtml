@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Queen Attack</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="~/css/styles.css">
-  </head>
-  <body>
+@{
+  Layout = "_Layout";
+}
     <div class="container well">
-      <h1>Enter Piece Coordinates</h1>
+      <h1>Rock Paper Scissors</h1>
       <div class="row">
         <form class="form" action="/" method="post">
           <input type="number" name="qx" placeholder="Enter Queen's X">
           <input type="number" name="qy" placeholder="Enter Queen's Y">
           <input type="number" name="vx" placeholder="Enter Victim's X">
           <input type="number" name="vy" placeholder="Enter Victim's Y">
-          <button type="submit" class="btn btn-info" name="button">GO!</button>
+          <button type="submit" class="btn btn-info" name="button">PLAY!</button>
         </form>
       </div>
       @if(@Model["msg"].Length > 0)
@@ -67,5 +61,3 @@
 
 
     </div>
-  </body>
-</html>

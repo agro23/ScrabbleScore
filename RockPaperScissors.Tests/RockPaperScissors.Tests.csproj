@@ -10,6 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QueenAttack\QueenAttack.csproj" />
+    <ProjectReference Include="..\RockPaperScissors\RockPaperScissors.csproj" />
   </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 
-namespace QueenAttack
+namespace RockPaperScissors
 {
     public class Startup
     {
@@ -30,6 +30,7 @@ namespace QueenAttack
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
             app.Run(async (context) =>
             {

@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System;
 
-namespace QueenAttack.Models
+namespace RockPaperScissors.Models
 {
-  public class Queen
+  public class Player
   {
     private int _x;
     private int _y;
 
-    public Queen(int x, int y)
+    public Player(int x, int y)
     {
       _x = x;
       _y = y;

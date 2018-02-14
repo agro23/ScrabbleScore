@@ -1,89 +1,54 @@
+# Rock Paper Scissors
 
-# Queen Attack
-
-#### By Cameron Anderson & Andy Grossberg
+#### By Andy Grossberg
 
 ## Description
-A program to test if a given set of coordinates is a valid target for the queen to attack in a game of chess.
+A program for two players to play Rock Paper Scissors.
+
+## Rules
+
+* Recreate the game Rock, Paper, Scissors. For anyone who has never played it, here are the rules:
+
+* It is played by 2 people. Each person chooses "Rock", "Paper", or "Scissors" by forming a shape with their hand.
+
+* They choose at the same time, so that each person doesn't know what the other person has picked.
+
+* If one person chooses "Rock" and the other person picks "Scissors" then "Rock" wins. It's a game of combinations:
+  - Rock v. Scissors = Rock wins
+  - Rock v. Paper = Paper wins
+  - Paper v. Scissors = Scissors wins
+
+* If both people choose the same thing, then it is a draw and nobody wins.
+
+* Write a method that can handle the different combinations of plays and make sure to write specs for all possible combination of plays. Your method should take 2 inputs - one for each player's choice. It should return "Player 1" if the first input wins, "Player 2" if the second input wins, and "Draw" if nobody wins.
+
+* Start by considering all possible inputs and outputs. Then choose the simplest input/output values and use them to write your first spec. Write all specs in english first, and then translate them into test methods and make them pass, one by one. Don't start coding until you've written your english specs, and don't start building the MVC website until all your specs are passing and your method is done.
+
+* Then, build a website, styled with CSS, where someone can go to play your game. Make sure you include a README for this project and create a Git repository for it.
+
+* Bonus points: Find a way to get the computer to randomly select a 'play' and make your website into a one player game. We don't yet know how to test something that's random, so it's okay to skip writing a spec for that part. Or, you could expand the rules of your game to include 3 players. Make sure to write specs for that before coding. You must understand your goal clearly before you can figure out how to get there.
 
 ## Specifications
-* choose an x and y for the queen
 
-* Display a view that is a title screen.
-
-* Use form to ask user for an x and y coord for the queen to start on.
-- Expected Input: 3, 5
-- Expected Output: None
-
-* output coords to main view
-- Expected Input: None
-- Expected Output: STRING
-
-* validate queen ranges 1 - 8
-- If false return to View with form
-
-* Use form to ask user for an x and y coord for the queen to target.
-- Expected Input: 4, 8
-- Expected Output: None
-
-* output coords to main view
-- Expected Input: None
-- Expected Output: STRING
-
-* validate target ranges 1 - 8
-- If false return to View with form
-
-* validate queen and target coordinates are different
-- If false return to View with form
-
-* Create QueenAttackTest object
-
-* Create Queen object
-
-* a. queen x and target x are equal
-- Expected input: (3, 7) , (3, 4)
-- Expected output: True
-- Expected input: (2, 7) , (6, 4)
-- Expected output: False
-
-* b. queen y and target y are equal
-- Expected input: (8, 4) , (3, 4)
-- Expected output: True
-- Expected input: (8, 1) , (3, 4)
-- Expected output: False
-
-* c. abs(qx - vx) is equal to abs(qy - vy)
-- Expected input: (8, 4) , (6, 6)
-- Expected output: True
-- Expected input: (1, 1) , (3, 3)
-- Expected output: True
-- Expected input: (8, 1) , (3, 4)
-- Expected output: False
-
-* use a - c to determine if victim can be reached by queen
-- Expected input: (8, 4) , (6, 6)
-- Expected output: "Queen takes piece"
-- Expected input: (8, 4) , (6, 3)
-- Expected output: "Queen cannot reach piece"
-
-* refactor code as needed.
+* SOMETHING
+* Refactor code as needed.
 
 ## Setup/Installation Requirements
 
-* Clone the git repository from 'https://github.com/camander321/LeapYearTest.git'.
-* run the command 'dotnet restore' to download the necessary packages.
-* run the command 'dotnet run' to build and run the server on localhost.
-* use your preferred web browser to navigate to localhost:5000
-
+* Clone the git repository from 'https://github.com/agro23/RockPaperScissors.git'.
+* Run the command 'dotnet restore' to download the necessary packages.
+* Run the command 'dotnet build' to build to build the app.
+* Run the command 'dotnet run' to run the server on localhost.
+* Use your preferred web browser to navigate to localhost:5000
 
 ## Support and contact details
 
-* contact the author at chamburg321@gmail.com
+* Contact the author at andy.grossberg@gmail.com
 
 ## Technologies Used
 
 * C#
-* Asp .NET Core MVC
+* Asp .NET Core 1.1 MVC
 * HTML
 * CSS
 * Javascript
@@ -92,7 +57,7 @@ A program to test if a given set of coordinates is a valid target for the queen 
 
 ### License
 
-Copyright (c) 2018 Cameron Anderson & Andy Grossberg
+Copyright (c) 2018 Andy Grossberg
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
