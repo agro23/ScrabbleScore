@@ -1,11 +1,12 @@
-# Rock Paper Scissors
+# Scrabble Score
 
 #### By Andy Grossberg
 
 ## Description
-A program for two players to play Rock Paper Scissors.
+A program for a player to enter their word from the game Scrabble and generate their estimated Score.
+Note this is the score for the letters only and does not include the values of the squares where they have placed their tiles.
 
-## Rules
+## Rules ********************************************************************
 
 * Recreate the game Rock, Paper, Scissors. For anyone who has never played it, here are the rules:
 
@@ -15,7 +16,7 @@ A program for two players to play Rock Paper Scissors.
 
 * If one person chooses "Rock" and the other person picks "Scissors" then "Rock" wins. It's a game of combinations:
   - Rock v. Scissors = Rock wins
-  - Rock v. Paper = Paper wins
+  - Rock v. Paper = Paper wins  
   - Paper v. Scissors = Scissors wins
 
 * If both people choose the same thing, then it is a draw and nobody wins.

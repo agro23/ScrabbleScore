@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 
-namespace RockPaperScissors
+namespace ScrabbleScore
 {
     public class Startup
     {
