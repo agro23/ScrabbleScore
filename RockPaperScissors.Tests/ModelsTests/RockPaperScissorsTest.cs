@@ -8,38 +8,63 @@ namespace RockPaperScissors.Tests
   [TestClass]
   public class RockPaperScissorsTest
   {
-    // [TestMethod]
-    // public void SameX_XEqualsQueenX_True()
-    // {
-    //   Queen queen = new Queen(6, 4);
-    //   Assert.AreEqual(true, queen.SameX(6));
-    //   Assert.AreEqual(false, queen.SameX(3));
-    // }
-    //
-    // [TestMethod]
-    // public void SameY_YEqualsQueenY_True()
-    // {
-    //   Queen queen = new Queen(6, 4);
-    //   Assert.AreEqual(true, queen.SameY(4));
-    //   Assert.AreEqual(false, queen.SameY(3));
-    // }
-    //
-    // [TestMethod]
-    // public void SameDiagonal_DiagonalEqualsQueenDiagonal_True()
-    // {
-    //   Queen queen = new Queen(8, 4);
-    //   Assert.AreEqual(true, queen.SameDiagonal(6, 6));
-    //   Assert.AreEqual(false, queen.SameDiagonal(5, 3));
-    // }
-    //
-    // [TestMethod]
-    // public void CanAttack_QueenCanReachTarget_True()
-    // {
-    //   Queen queen = new Queen(8, 4);
-    //   Assert.AreEqual(true, queen.CanAttack(8, 1));
-    //   Assert.AreEqual(true, queen.CanAttack(3, 4));
-    //   Assert.AreEqual(true, queen.CanAttack(6, 6));
-    //   Assert.AreEqual(false, queen.CanAttack(5, 3));
-    // }
+    Player PlayerOne = new Player("Player One");
+    Player PlayerTwo = new Player("Player Two");
+    // PlayerOne.SetName("Rock");
+
+
+    [TestMethod]
+    public void PlayerOne_GetName_Equals_PlayerOne_True()
+    {
+      Assert.AreEqual(true, (PlayerOne.GetName()=="Player One") ); // should pass
+    }
+
+    [TestMethod]
+    public void PlayerOne_GetCurrentMove_Equals_Rock_True()
+    {
+      PlayerOne.SetCurrentMove("Rock");
+      Assert.AreEqual(true, (PlayerOne.GetCurrentMove()=="Rock") ); // should pass
+    }
+
+    [TestMethod]
+    public void PlayerTwo_GetName_Equals_PlayerTwo_True()
+    {
+      Assert.AreEqual(true, (PlayerTwo.GetName()=="Player Two") ); // should pass
+    }
+
+    [TestMethod]
+    public void PlayerTwo_GetCurrentMove_Equals_Rock_True()
+    {
+      PlayerTwo.SetCurrentMove("Rock");
+      Assert.AreEqual(true, (PlayerTwo.GetCurrentMove()=="Rock") ); // should pass
+    }
+
+    [TestMethod]
+    public void WhoWins_PlayerOne_Rock_PlayerTwo_Rock_EqualsDraw_True()
+    {
+      PlayerOne.SetCurrentMove("Rock");
+      PlayerTwo.SetCurrentMove("Rock");
+      Assert.AreEqual(true, (Player.WhoWins(PlayerOne.GetCurrentMove(), PlayerTwo.GetCurrentMove())=="Draw") ); // should pass
+    }
+
+    [TestMethod]
+    public void WhoWins_PlayerOne_Rock_PlayerTwo_Paper_EqualsPlayerTwo_True()
+    {
+      PlayerOne.SetCurrentMove("Rock");
+      PlayerTwo.SetCurrentMove("Paper");
+      Assert.AreEqual(true, (Player.WhoWins(PlayerOne.GetCurrentMove(), PlayerTwo.GetCurrentMove())=="Player Two") ); // should pass
+    }
+
+    [TestMethod]
+    public void WhoWins_PlayerOne_Rock_PlayerTwo_Rock_EqualsPlayerOne_True()
+    {
+      PlayerOne.SetCurrentMove("Rock");
+      PlayerTwo.SetCurrentMove("Scissors");
+      Assert.AreEqual(true, (Player.WhoWins(PlayerOne.GetCurrentMove(), PlayerTwo.GetCurrentMove())=="Player One") ); // should pass
+    }
+
+
+
+
   }
 }

@@ -19,6 +19,15 @@ namespace RockPaperScissors.Controllers
     // [HttpPost("/")]
     // public ActionResult Result()
     // {
+    //   Player PlayerOne = new Player ("Player One");
+    //   Player PlayerTwo = new Player ("Player One");
+    //   return View("Index", model);
+    // }
+
+//********************************************************************
+
+
+
     //   string msg = "";
     //   int qx = Int32.Parse(Request.Form["qx"]);
     //   int qy = Int32.Parse(Request.Form["qy"]);

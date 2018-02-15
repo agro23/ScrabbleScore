@@ -77,6 +77,8 @@ A program for two players to play Rock Paper Scissors.
 
 * Add a static Method to check moves provided by Player One and Player Two that returns either "Player One", "Player Two", or "Draw" depending on the game logic stated above.
 
+* Create an View called Index.cshtml as a title screen. <--
+
 * Get a move from Player One via a form and output it to the Console.
 
 * Set Player Two to "Rock", "Paper", and "Scissors" in turn, checking each against Player One's move and outputting the result to the Console.
@@ -98,10 +100,6 @@ A program for two players to play Rock Paper Scissors.
   - EXPECTED OUTPUT: "Player One" to Console
   - EXPECTED INPUT: "Scissors" (and PlayerTwo is set to "Scissors")
   - EXPECTED OUTPUT: "Draw" to Console
-
-* Create an View called Index.cshtml as a title screen.
-
-* Take input from Player One via a form on Index.cshtml.
 
 * Take input from Player Two via a form on Index.cshtml.
 
