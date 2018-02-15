@@ -107,11 +107,11 @@ A program for two players to play Rock Paper Scissors.
 
 * Run the input from both players through the game logic with outputs to a Results.cshtml page.
 
-* Validate inputs as only "Rock", "Paper", or "Scissors". <--
+* Validate inputs as only "Rock", "Paper", or "Scissors".
 
 * Modify the results from the Object into an actual sentence to send to the Results page.
 
-* Refactor code as needed.
+* Refactor code as needed. <--
 
 **IF TIME PERMITS:**
 

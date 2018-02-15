@@ -22,7 +22,7 @@ namespace RockPaperScissors.Controllers
     public ActionResult Result()
     {
       Dictionary<string, object> model = new Dictionary<string, object>(); // create dictionary to pass as Model
-        model.Add("msg", ""); // create blank message to pass at load time
+      model.Add("msg", ""); // create blank message to pass at load time
       Player PlayerOne = new Player ("Player One");
       Player PlayerTwo = new Player ("Player Two");
       string x =  Request.Form["PlayerOne"];
@@ -31,19 +31,27 @@ namespace RockPaperScissors.Controllers
       // Console.WriteLine("Player Two chose: " + y);
       PlayerOne.SetCurrentMove(x);
       PlayerTwo.SetCurrentMove(y);
-      // Console.WriteLine("And the winner is: " + Player.WhoWins(x, y));
-      string result ="";
-      if (Player.WhoWins(x,y) == "Draw")
+      if (x !="Rock" && x !="Paper" && x !="Scissors" && y !="Rock" && y !="Paper" && y !="Scissors")
       {
-        result="The game is a draw!";
+        model["msg"] ="Invalid Input. Try Again!";
+        return View ("Index", model);
       }
       else
       {
-        result=Player.WhoWins(x,y)+" has won the game!";
+        // Console.WriteLine("And the winner is: " + Player.WhoWins(x, y));
+        string result ="";
+        if (Player.WhoWins(x,y) == "Draw")
+        {
+          result="The game is a draw!";
+        }
+        else
+        {
+          result=Player.WhoWins(x,y)+" has won the game!";
+        }
+        model["msg"] = result;
+        // return View("Index", model);
+        return View (model);
       }
-      model["msg"] = result;
-      // return View("Index", model);
-      return View(model);
     }
 
 //********************************************************************
