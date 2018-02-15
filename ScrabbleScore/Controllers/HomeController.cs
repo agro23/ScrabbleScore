@@ -14,7 +14,7 @@ namespace ScrabbleScore.Controllers
     public ActionResult Index()
     {
       Dictionary<string, object> model = new Dictionary<string, object>(); // create dictionary to pass as Model
-      model.Add("msg", "Scrabble Score"); // create blank message to pass at load time
+      model.Add("msg", "Scrabble Score"); // create message to pass at load time
       return View("Index", model);
     }
 

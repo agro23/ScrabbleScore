@@ -13,11 +13,11 @@ namespace ScrabbleScore.Tests
     // // PlayerOne.SetName("Rock");
     //
     //
-    // [TestMethod]
-    // public void PlayerOne_GetName_Equals_PlayerOne_True()
-    // {
-    //   Assert.AreEqual(true, (PlayerOne.GetName()=="Player One") ); // should pass
-    // }
+    [TestMethod]
+    public void PlayerOne_GetName_Equals_PlayerOne_True()
+    {
+      Assert.AreEqual(true, (Word.GetPoint("A")==1) ); // should pass
+    }
     //
     // [TestMethod]
     // public void PlayerOne_GetCurrentMove_Equals_Rock_True()

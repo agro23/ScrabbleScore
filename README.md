@@ -14,35 +14,55 @@ Make sure to start with your specs, and that you include a README for this proje
 
 Here are the values of letters in Scrabble:
 
-A, E, I, O, U, L, N, R, S, T       1
-D, G                               2
-B, C, M, P                         3
-F, H, V, W, Y                      4
-K                                  5
-J, X                               8
-Q, Z                               10
+- A, E, I, O, U, L, N, R, S, T:      1
+- D, G                        :      2
+- B, C, M, P                  :      3
+- F, H, V, W, Y               :      4
+- K                           :      5
+- J, X                        :      8
+- Q, Z                        :      10
 
 If you get this far, you've done great! Don't worry about getting to the rest of the projects by the end of the day.
 
 ## Specifications
 
-* Take input of word from User via REPL, output to Console
+* Take input of a letter from User via REPL, output it to Console
+- EXPECTED INPUT: "A"
+- EXPECTED OUTPUT: "A"
+
+* Run the program logic on the Letter in REPL, output the results to the console.
+- EXPECTED INPUT: "A"
+- EXPECTED OUTPUT: "1"
+- EXPECTED INPUT: "Z"
+- EXPECTED OUTPUT: "10"
+
+* Take input of a word from User via REPL, output it to Console
 - EXPECTED INPUT: "APPLE"
 - EXPECTED OUTPUT: "APPLE"
 
-* Run the program logic on the word. <---
+* Do not accept input that contains characters other than the alphabet via REGEX.
 
-* Create a Word Object with an ID, instances array, name, and currentScore. (this will allow for future words to be compared...)
+* Convert input to uppercase.
 
-* Add Getters, and Setters.
+* Run the program logic on the word via a loop in REPL, output results to the console.
+- EXPECTED INPUT: "A"
+- EXPECTED OUTPUT: "The letter A is worth: 1."
+- EXPECTED INPUT: "Z"
+- EXPECTED OUTPUT: "The letter A is worth: 10"
 
-* Create a MyWord instance
+* Create a Model Word Object with an ID, instances array, name, and currentScore. (this will allow for future words to be compared...)
 
-* Set MyWord to "Test"
+* Add Getters, and Setters as needed.
+
+* Create a MyWord instance in the HomeController. <---
+
+* Set MyWord to "Test".
 
 * Add a static Method to perform the program logic as tested in REPL.
 
-* Create an View called Index.cshtml as a title screen.
+* Create a View called Index.cshtml as a title screen.
+
+* Test the View Controller to make sure the View() Index works.
 
 * Get a Word from the user via a form and output it to the Console.
 
@@ -55,7 +75,11 @@ If you get this far, you've done great! Don't worry about getting to the rest of
 
 * Take input from the user via a form on Index.cshtml.
 
+* Test the View Controller to make sure the View() Index works when passing its model from the form to the page.
+
 * Run the input from the user through the program logic with output to a Results.cshtml page.
+
+* Test the View Controller to make sure the View() Results works when passing its model from the form to the page.
 
 * Validate inputs by converting it all to upper case.
 
