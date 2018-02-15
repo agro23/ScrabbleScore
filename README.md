@@ -77,7 +77,7 @@ A program for two players to play Rock Paper Scissors.
 
 * Add a static Method to check moves provided by Player One and Player Two that returns either "Player One", "Player Two", or "Draw" depending on the game logic stated above.
 
-* Create an View called Index.cshtml as a title screen. <--
+* Create an View called Index.cshtml as a title screen.
 
 * Get a move from Player One via a form and output it to the Console.
 
@@ -103,7 +103,7 @@ A program for two players to play Rock Paper Scissors.
 
 * Take input from Player Two via a form on Index.cshtml.
 
-* Run the input from both players through the game logic with outputs to the Console
+* Run the input from both players through the game logic with outputs to the Console <-----
 
 * Run the input from both players through the game logic with outputs to a Results.cshtml page.
 
@@ -119,7 +119,7 @@ A program for two players to play Rock Paper Scissors.
 
 * Repeat all the tests of Player Two but on the Computer object instead
 
-* Have the Computer Player choose a random
+* Have the Computer Player choose a random move from "Rock", "Paper" or "Scissors".
 
 * Have the Computer choose a move based on VERY light AI.
 

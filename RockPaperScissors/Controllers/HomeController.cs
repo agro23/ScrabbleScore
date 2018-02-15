@@ -16,13 +16,30 @@ namespace RockPaperScissors.Controllers
       return View("Index", model);
     }
 
-    // [HttpPost("/")]
-    // public ActionResult Result()
-    // {
-    //   Player PlayerOne = new Player ("Player One");
-    //   Player PlayerTwo = new Player ("Player One");
-    //   return View("Index", model);
-    // }
+    [HttpPost("/")]
+    public ActionResult Result()
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>(); // create dictionary to pass as Model
+      model.Add("msg", ""); // create blank message to pass at load time
+      Player PlayerOne = new Player ("Player One");
+      Player PlayerTwo = new Player ("Player Two");
+      string x =  Request.Form["PlayerOne"];
+      Console.WriteLine("Player One chose: " + x);
+      string y =  Request.Form["PlayerTwo"];
+      Console.WriteLine("Player Two chose: " + y);
+      PlayerOne.SetCurrentMove(x);
+      PlayerTwo.SetCurrentMove(y);
+      Console.WriteLine("And the winner is: " + Player.WhoWins(x, y));
+      // Console.WriteLine("Player Two chose: " +  PlayerTwo.GetCurrentMove());
+      // Console.WriteLine(Player.WhoWins(PlayerOne.GetCurrentMove(), PlayerTwo.GetCurrentMove()));
+      // PlayerTwo.SetCurrentMove("Paper");
+      // Console.WriteLine("Player Two chose: " +  PlayerTwo.GetCurrentMove());
+      // Console.WriteLine(Player.WhoWins(PlayerOne.GetCurrentMove(), PlayerTwo.GetCurrentMove()));
+      // PlayerTwo.SetCurrentMove("Scissors");
+      // Console.WriteLine("Player Two chose: " +  PlayerTwo.GetCurrentMove());
+      // Console.WriteLine(Player.WhoWins(PlayerOne.GetCurrentMove(), PlayerTwo.GetCurrentMove()));
+      return View("Index", model);
+    }
 
 //********************************************************************
 
